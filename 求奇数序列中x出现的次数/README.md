@@ -19,8 +19,8 @@ javascript代码：
 const count1 = function (n, x) {
   const step = 2;     // 奇数数列，步进为2
   let sum = 0;
-  for (let i = 1; i <= n; i = i + step) {
-    const str = "" + i,xx = "" + x;
+  for (let i = 1; i <= n; i += step) {
+    const str = "" + i, xx = "" + x;
     for (let j = 0; j < str.length; j++) {
       if (str[j] === xx) {
         sum++;
