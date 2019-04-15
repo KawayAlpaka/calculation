@@ -83,3 +83,21 @@ testCases.forEach(function (testCase) {
   }
 });
 ```
+
+## 补充
+进一步研究发现，两个质数`a`、`b`的乘积 `n`，只有`1`、`a`、`b`、`n`这几个约数。    
+也就是说只要确定`n`是两个不同质数的乘积，则只存在唯一的一对大于1的整数`a`、`b`满足 `a * b = n`。    
+这就更简单了，只要找到一个大于1的整数`b`，满足`n % b = 0`，则`b` 和 `n / b`就是答案。（完全不需要计算质数了）     
+
+javascript代码：
+```javascript
+const find2number = function (n) {
+  const max = Math.sqrt(n);
+  for (let b = 2; b <= max; b++) {
+    if (n % b === 0) {
+      return [n / b, b];
+    }
+  }
+  return false;
+};
+```
