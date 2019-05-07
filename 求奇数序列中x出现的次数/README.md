@@ -78,9 +78,9 @@ count1(12345,3)       // 4721
 
 **奇数序列**长度 约等于 **自然数序列**长度 的 50%；   
 > `current != x`，当前位是`个位`时，`bit_sum`不变；   
-> `current != x`，当前位非`个位`时，`bit_sum`会减少50%；    
+> `current != x`，当前位`非个位`时，`bit_sum`会减少50%；    
 > `current = x`，且当前位是`个位`时，`bit_sum` = `higher * factor + 1`;     
-> `current = x`，且当前位非`个位`时，`bit_sum` = `higher * factor * 0.5 + ceil(lower * 0.5)`（进一法）;     
+> `current = x`，且当前位`非个位`时，`bit_sum` = `higher * factor * 0.5 + ceil(lower * 0.5)`（进一法）;     
 
 经过这番折腾，算法就可以解决本题了，时间复杂度**O(log<sub>10</sub>n)**（飞速）。    
 
